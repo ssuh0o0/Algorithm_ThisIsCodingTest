@@ -8,9 +8,8 @@ for i in range(n):
 dx = [1, 0, -1, 0 ] # 오른쪽 아래 왼쪽 위
 dy = [0, 1, 0, -1] 
 
+
 def bfs(x, y): 
-    cnt = 1
-    visited = [[0] * n for _ in range(m) ] 
     queue = deque()
     queue.append((x,y)) 
     while queue: 
@@ -21,10 +20,8 @@ def bfs(x, y):
                 continue 
             if graph[nx][ny] == 0: 
                 continue 
-            if graph[nx][ny] == 1 and visited[nx][ny] == 0 : 
-                graph[nx][ny] = cnt
-                cnt += 1
-                visited[nx][ny] = 1
+            if graph[nx][ny] == 1  : 
+                graph[nx][ny] = graph[x][y] + 1
                 queue.append((nx, ny)) 
-    return cnt 
+    return graph[n-1][m-1]
 print(bfs(0, 0))
