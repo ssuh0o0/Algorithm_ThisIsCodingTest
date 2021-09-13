@@ -29,6 +29,7 @@ print(fibo(4))
 
 ## 메모제이션 (Memoization) 
 ![image](https://user-images.githubusercontent.com/55631147/133082195-13d1f278-d319-400f-9c94-cab2734d54b6.png)
+
 큰 문제를 해결 하기 위해 작은 문제를 호출한다고 하여 Top-down 방식이라고 한다.
 * 메모이제이션은 다이나믹 프로그래밍을 구현하는 방법 중 하나이다 
 * 한 번 계산한 결과를 메모리 공간에 메모하는 기법이다 
